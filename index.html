@@ -819,6 +819,27 @@ a{color:var(--brand);text-decoration:none}
 @media (max-width:479px){
   .mat-title{background-image:none !important}
 }
+/* ===== 이지필 (박리형 · 원상복구) ===== */
+:root{--peel:#C8232B;--peel-bg:rgba(200,35,43,.07)}
+#peel::before{display:none}
+.mat-peel{--mat:var(--peel);--mat-bg:var(--peel-bg)}
+.chip-peel{background:var(--peel-bg);color:var(--peel);border-color:rgba(200,35,43,.28)}
+.badge-peel{background:var(--peel-bg);color:var(--peel)}
+.hi-peel{color:var(--peel);font-weight:700}
+#peel .step-badge.badge-peel{color:#fff;background:linear-gradient(135deg,#EE4B4B,#B01F27)}
+#peel .product-chip.chip-peel{color:#fff;background:linear-gradient(135deg,#EE4B4B,#B01F27);border-color:transparent}
+#peel .step-num{background:linear-gradient(135deg,#EE4B4B,#B01F27);color:#fff;border-color:transparent}
+#peel .step-label,#peel b,#peel strong{color:#8E1A21}
+#peel .step-arrow{color:#C8232B}
+.mat-nav a.nav-peel{--pc:#B01F27}
+.pdf-btn.pb-peel{background:linear-gradient(135deg,#F59A9A,#E04A4A 50%,#A51D25)}
+.diag-item.dg-peel .diag-a{color:var(--peel)}
+.ep-photos{display:flex;gap:12px;flex-wrap:wrap;margin:2px 0 12px}
+.ep-fig{margin:0;width:clamp(140px,30%,200px)}
+.ep-photo{display:block;width:100%;aspect-ratio:1/1;object-fit:contain;background:#fff;border:1px solid var(--border);border-radius:12px;cursor:zoom-in;image-rendering:auto}
+.ep-fig figcaption{font-size:12.5px;font-weight:700;line-height:1.4;margin-top:5px;color:var(--text)}
+.ep-fig figcaption span{display:block;font-weight:500;font-size:11.8px;color:var(--muted)}
+
 /* ===== 자주 묻는 질문(FAQ) ===== */
 .faq-browse{margin-top:14px;padding-top:12px;border-top:1px dashed var(--border)}
 .faq-browse-t{font-size:14px;font-weight:700;color:var(--brand);margin:0 2px 8px;line-height:1.5}
@@ -896,6 +917,12 @@ a{color:var(--brand);text-decoration:none}
   .faq-q{font-size:15px}
   .faq-step{padding-left:33px}
 }
+.faq-nopdf{font-size:12px;color:var(--faint)}
+
+/* ===== 이지필(원상복구) 섹션 ===== */
+:root{--peel:#D03A3A;--peel-bg:rgba(208,58,58,.08)}
+.mat-peel{--mat:var(--peel);--mat-bg:var(--peel-bg)}
+.mat-nav a.nav-peel{--pc:#D03A3A}
 
 </style>
 </head>
@@ -957,6 +984,7 @@ a{color:var(--brand);text-decoration:none}
   <a href="javascript:void(0)" onclick="goTo('pool')" class="nav-pool">🏊 실내외 수영장</a>
   <a href="javascript:void(0)" onclick="goTo('wp')" class="nav-wp">💧 옥상방수(우레탄)</a>
   <a href="javascript:void(0)" onclick="goTo('floor')" class="nav-floor">🏭 실내방진(에폭시)</a>
+  <a href="javascript:void(0)" onclick="goTo('peel')" class="nav-peel">🏷 이지필(원상복구)</a>
 </div>
 
 <!-- 증상・소재 검색 -->
@@ -1062,6 +1090,14 @@ a{color:var(--brand);text-decoration:none}
       <span class="diag-text">
         <div class="diag-q">실외 수영장 콘크리트 바닥·벽면을 칠하고 물을 채우려고 해요</div>
         <div class="diag-a">→ 실내외 수영장 가이드 (대형 실외 : 슈퍼폭시 370 / 실내·소규모 : 워터세이프 300)</div>
+      </span>
+      <span class="diag-arrow">▶</span>
+    </div>
+    <div onclick="goTo('peel')" class="diag-item dg-peel">
+      <span class="diag-icon">🏷</span>
+      <span class="diag-text">
+        <div class="diag-q">나중에 벗겨낼 수 있어서 원상복구가 쉬운 실내 페인트를 찾아요</div>
+        <div class="diag-a">→ 이지필(박리형) 가이드 (하도 : 이지필 프라이머 / 상도 : 이지필 멀티)</div>
       </span>
       <span class="diag-arrow">▶</span>
     </div>
@@ -2954,6 +2990,129 @@ a{color:var(--brand);text-decoration:none}
           <div class="spec-item full"><strong>사용량</strong><span class="val"><b>0.87 kg/㎡</b> (건조도막 400㎛ 기준) · 1갤런당 약 3.3~5㎡(1~1.5평, 2회 도장 기준)</span></div>
         </div>
         <div class="info-box">💡 색상·물성·주의사항·기술자료·도장사양서·카다로그·시공 영상은 위 <b>[상세 보기]</b> 버튼을 눌러 확인하세요.</div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ══ 이지필 (박리형 · 원상복구 실내 인테리어) ══ -->
+<div class="mat-section mat-peel" id="peel">
+  <div class="mat-title">
+    <span class="icon">🏷</span>
+    <span>이지필 (박리형 · 원상복구)</span>
+    <span class="sub">실내 수성 · 프라이머 + 멀티</span>
+  </div>
+  <div class="mat-body">
+
+    <div class="step">
+      <div class="step-header"><span class="step-num">0</span><span class="step-label">이지필은 2가지가 한 세트입니다</span><span class="step-badge badge-peel">제품 구성</span></div>
+      <div class="step-content">
+        <div class="ep-photos">
+          <figure class="ep-fig"><img class="ep-photo" src="img/easypeel-primer.jpg" alt="이지필 프라이머" loading="lazy" decoding="async" onclick="openImgLightbox('img/easypeel-primer.jpg','이지필 프라이머')" onerror="this.parentNode.style.display='none'"><figcaption>① 이지필 프라이머 <span>하도</span></figcaption></figure>
+          <figure class="ep-fig"><img class="ep-photo" src="img/easypeel-multi.jpg" alt="이지필 멀티 1L" loading="lazy" decoding="async" onclick="openImgLightbox('img/easypeel-multi.jpg','이지필 멀티 1L')" onerror="this.parentNode.style.display='none'"><figcaption>② 이지필 멀티 <span>상도 · 1L</span></figcaption></figure>
+        </div>
+        <div class="spec-grid">
+          <div class="spec-item full"><strong><span class="product-chip chip-peel">이지필 프라이머</span> — 하도</strong><span class="val">이지필 멀티를 칠하기 전에 먼저 바르는 하도입니다. 이지필 멀티는 벽지·목재 등 다양한 소지에 <b>프라이머와 함께</b> 도장합니다.</span></div>
+          <div class="spec-item full"><strong><span class="product-chip chip-peel">이지필 멀티</span> — 상도</strong><span class="val">필러블(박리) 성능이 우수한 특수 수지를 쓴 1액형 수성페인트 · 에그쉘광 · 백색·담색. <b>건조 후 손쉽게 도막을 벗겨낼 수 있어 원상복구가 간편한</b> DIY용 실내 인테리어 도료입니다.</span></div>
+        </div>
+        <div class="info-box">
+          💡 <b>적용 범위(내부용):</b> 콘크리트 · 시멘트 · 몰탈 · 석고 · 벽지 · 유리 · 목재<br>
+          KSM 6010 2종2급에 적합하도록 설계되었고, 유해 유기용제·중금속을 쓰지 않으며 VOC 함량을 최소화해 <b>환경마크</b>를 획득한 친환경 수성페인트입니다.
+        </div>
+      </div>
+    </div>
+
+    <div class="step-arrow">↓</div>
+
+    <div class="step">
+      <div class="step-header"><span class="step-num">1</span><span class="step-label">표면처리</span><span class="step-badge badge-prep">필수</span></div>
+      <div class="step-content">
+        신축 건축물의 시멘트 소재는 <b>28일 이상 양생</b>(25℃ · 상대습도 50% 기준)합니다.<br>
+        적정 <b>함수율 10% 이하</b> · 적정 <b>pH 7~9</b><br>
+        피도면의 <b>레이턴스·시멘트가루·모래·흙·유분</b>이 없도록 깨끗이 합니다.<br>
+        틈새나 홈은 <b>월드퍼티로 메꾸고</b> 표면조정(샌딩) 후 도장합니다.<br>
+        보수도장 시 <span class="hi-orange">노화된 구도막은 완전히 제거</span>하십시오.
+      </div>
+    </div>
+
+    <div class="step-arrow">↓ 소지 상태가 불량하면 수성바인다200 먼저</div>
+
+    <div class="step">
+      <div class="step-header"><span class="step-num">2</span><span class="step-label">하도 — 이지필 프라이머</span><span class="step-badge badge-peel">하도</span></div>
+      <div class="step-content">
+        <span class="product-chip chip-peel">이지필 프라이머</span> <button type="button" class="vcard-more" style="vertical-align:middle;" onclick="openProduct('이지필 프라이머')">상세 보기 <span class="vc-chev">▾</span></button>
+        <div class="spec-grid">
+          <div class="spec-item full"><strong>제품 특징</strong><span class="val">흡수성 소재의 필러블 성능을 위한 <b>이지필 멀티 전용 전처리 수성도료</b> · 투명 · 1액형 · 피도면에 흡수</span></div>
+          <div class="spec-item"><strong>도장횟수</strong><span class="val"><b>2회 이상</b> (피도면에 스며듦)</span></div>
+          <div class="spec-item"><strong>이론도포면적</strong><span class="val">15.4㎡/L (1회) · 손실량·표면상태 고려</span></div>
+          <div class="spec-item"><strong>희석</strong><span class="val"><span class="hi-orange">희석하지 않음</span> (그대로 도장)</span></div>
+          <div class="spec-item"><strong>건조 (25℃)</strong><span class="val">고화건조 2시간 이내 · 재도장 <b>4시간 이후</b></span></div>
+          <div class="spec-item"><strong>피도면</strong><span class="val">콘크리트 · 시멘트 · 몰탈</span></div>
+          <div class="spec-item"><strong>포장 · 부피고형분</strong><span class="val">0.4L · 15.4%</span></div>
+          <div class="spec-item full"><strong>도장사양서 일위대가(참고)</strong><span class="val">1회 · 0.06 L/㎡ · 2회 이상 도장</span></div>
+        </div>
+        <div class="warn-box" style="margin-top:10px;">
+          ⚠ <b>수성바인다200이 먼저 필요한 경우</b> — 콘크리트 소지 상태 불량 · 구도막 부위 · 동절기 · 시멘트 견출·미장면 등의 쵸킹 소지 · 흡수차가 심한 바탕면 · 시멘트 용출이 심한 부위는 <b>수성바인다200을 하도 도장한 뒤 이지필 프라이머 → 이지필 멀티</b> 순서로 도장합니다.
+          <button type="button" class="vcard-more" style="vertical-align:middle;margin-left:4px;" onclick="openProduct('수성바인다200')">수성바인다200 보기 <span class="vc-chev">▾</span></button>
+        </div>
+        <div class="note-small" style="margin-top:8px;">※ 프라이머 물성은 제품 물성표 기준이며, 일위대가는 이지필 멀티 도장사양서 기준입니다.</div>
+      </div>
+    </div>
+
+    <div class="step-arrow">↓ 완전 건조를 확인한 뒤</div>
+
+    <div class="step">
+      <div class="step-header"><span class="step-num">3</span><span class="step-label">상도 — 이지필 멀티</span><span class="step-badge badge-peel">박리형 상도</span></div>
+      <div class="step-content">
+        <span class="product-chip chip-peel">이지필 멀티</span> <button type="button" class="vcard-more" style="vertical-align:middle;" onclick="openProduct('이지필 멀티')">상세 보기 <span class="vc-chev">▾</span></button>
+        <div class="danger-box" style="margin-top:10px;">
+          ⚠️ <b>나중에 벗겨낼(제거할) 계획이 있다면 3회 이상 필히 도장하세요.</b> 물성자료의 도장횟수는 2~3회이며, 도장사양서는 붓·로라로 3회 이상 도장하도록 안내합니다.
+        </div>
+        <div class="spec-grid">
+          <div class="spec-item"><strong>도장 도구</strong><span class="val">붓 · 로라</span></div>
+          <div class="spec-item"><strong>희석</strong><span class="val">물(청수) 최대 5% 이내 (도료 부피비)</span></div>
+          <div class="spec-item"><strong>재도장 간격</strong><span class="val">25℃ 기준 <b>3시간 이후</b> · 습도·통풍에 따라 달라지므로 완전 건조 확인</span></div>
+          <div class="spec-item"><strong>고화건조</strong><span class="val">25℃ 1시간 이내</span></div>
+          <div class="spec-item"><strong>이론도포면적</strong><span class="val">13.8㎡/L (1회 · 건조도막 30㎛ 기준) · 손실량·표면상태 고려</span></div>
+          <div class="spec-item"><strong>마감 · 색상 · 포장</strong><span class="val">에그쉘광 · 백색, 담색 · 1L · 부피고형분 41.5%(백색)</span></div>
+        </div>
+        <div class="note-small" style="margin-top:10px;">💡 상세 사양 · <b>소요량 계산</b> · 주의사항 · 기술자료는 <b>상세 보기</b>에서 확인하세요.</div>
+      </div>
+    </div>
+
+    <div class="step-arrow">↓ 소요량 기준</div>
+
+    <div class="step">
+      <div class="step-header"><span class="step-num">4</span><span class="step-label">일위대가 (도장사양서)</span><span class="step-badge badge-peel">소요량</span></div>
+      <div class="step-content">
+        <div class="spec-grid">
+          <div class="spec-item"><strong>하도 · 이지필 프라이머</strong><span class="val">1회 · 피도체 스며듦 · <b>0.06 L/㎡</b>/1회 · 2회 이상 도장</span></div>
+          <div class="spec-item"><strong>상도 · 이지필 멀티</strong><span class="val">1회 · 30㎛ · <b>0.07 L/㎡</b>/1회 · 3회 이상 도장</span></div>
+        </div>
+        <div class="note-small" style="margin-top:8px;">* 실제 소요량은 작업조건·작업방법 등에 따라 가감될 수 있습니다.</div>
+      </div>
+    </div>
+
+    <div class="step-arrow">↓</div>
+
+    <div class="step">
+      <div class="step-header"><span class="step-num">5</span><span class="step-label">도장 전 꼭 확인하세요</span><span class="step-badge badge-peel">주의</span></div>
+      <div class="step-content">
+        <div class="warn-box">
+          ⚠ <b>기상조건</b>: 대기온도 5~35℃ · 상대습도 85% 이하. 비 오는 날 · 습도 85% 이상 · 기온 5℃ 이하에는 정상 물성이 나오지 않으므로 도장 금지(도막 균열·부착불량).<br>
+          ⚠ <b>유성도료가 도장된 목재·철재·플라스틱</b> 소지에는 부착이 불량하므로 도장을 금합니다(소비자상담실 확인).<br>
+          ⚠ <b>가소제가 든 피도면·발포벽지·가죽소파</b> 등에 도장·접촉하면 오염·끈적거림·변색이 생길 수 있습니다.<br>
+          ⚠ 구도막 위 보수도장은 <b>구도막과의 적합성</b>을 소비자상담실로 확인한 뒤 사용합니다.<br>
+          ⚠ 동일 제품·색상·LOT라도 희석비·도장기구·방법이 다르면 <b>이색현상</b>이 생길 수 있으니 동일 LOT·동일 도구로 작업하고, 도장 전·중 균일하게 교반합니다(믹서 교반 시 기포 주의).<br>
+          ⚠ 현장 조색은 수성잉크 <b>아크로텍스잉크 최대 5%(부피비)</b> 이내. 과량 사용 시 이색·건조불량·내수성 불량·VOC 증가.<br>
+          ⚠ 스프레이 도장은 연속 작업이 끊기면 광택 차이로 이색이 생기므로 연속으로 작업하거나 골부위 등 경계에서 끊어 작업합니다.<br>
+          ⚠ 타 도료와 혼합 금지 · 얼지 않게 보관 · <b>개봉 후 즉시 사용</b> · 상온(5~35℃) 건냉암소에 밀폐·직립 보관 · 저장기간 12개월.
+        </div>
+        <div class="pdf-btns">
+          <button type="button" class="pdf-btn pb-peel" onclick="openPdf('pdf/1tech3052481.pdf','이지필 멀티 기술자료')">📄 기술자료</button>
+          <button type="button" class="pdf-btn pb-peel" onclick="openPdf('pdf/1pntg3052481.pdf','이지필 멀티 도장사양서')">📐 도장사양서</button>
+        </div>
       </div>
     </div>
 
@@ -6538,6 +6697,119 @@ else enhanceTermLinks();
 </script>
 
 <script>
+/* ══════════ 이지필 멀티 · 이지필 프라이머 ══════════
+   근거: 이지필 멀티 기술자료(1tech3052481) · 도장사양서(1pntg3052481)
+   이지필 프라이머 물성은 사용자 제공 물성표 기준입니다. 기술자료 PDF 파일명이 확정되면 pdfs에 추가하세요(pdfNote).
+   ─────────────────────────────────────────────── */
+Object.assign(window.PRODUCT_DB, {
+  "이지필 멀티": {
+    category: "상도 · 박리형(필러블) 수성 · 실내 (KSM6010 2종2급)",
+    image: "img/easypeel-multi.jpg",
+    desc: "필러블 성능이 우수한 특수 수지와 내후성이 우수한 안료를 주성분으로 하는 1액형 친환경 수성페인트. 건조 후 손쉽게 도막을 벗겨낼 수 있는 박리형이라 원상복구가 간편한 DIY용 실내 인테리어 도료입니다. 콘크리트·시멘트·몰탈·석고뿐 아니라 벽지·목재 등 다양한 소지에 프라이머와 함께 도장할 수 있습니다.",
+    uses: "콘크리트 · 시멘트 · 몰탈 · 석고 · 벽지 · 유리 · 목재 등의 내부용 수성 도료 (원상복구가 필요한 DIY 실내 인테리어)",
+    spec: "마감 에그쉘광 · 색상 백색, 담색 · 조성 1액형\n피도면 콘크리트, 시멘트몰탈, 석고보드, 벽지, 유리, 목재\n부피고형분 41.5%(백색) · 건조도막두께 30㎛(1회 도장 기준)\n도장횟수 2~3회 (제거할 계획 있을 시 3회 이상 필히 도장)\n이론도포면적 13.8㎡/L/1회 (도장작업 시 손실량과 표면상태를 고려)\n건조(25℃) 고화건조 1시간 이내 · 재도장간격 3시간 이후\n희석 물 5% 이내(도료 부피비) · 도장기구 붓, 로라\n도장시스템 — 하도 이지필 프라이머 / 상도 이지필 멀티\n일위대가 — 하도 이지필 프라이머 1회 · 피도체 스며듦 · 0.06 L/㎡/1회 (2회 이상 도장) / 상도 이지필 멀티 1회 · 30㎛ · 0.07 L/㎡/1회 (3회 이상 도장)\n작업 기상조건 대기온도 5~35℃ · 상대습도 85% 이하",
+    packaging: "1L (저장기간 12개월 / 5~35℃ 실내보관)",
+    filters: "KSM 6010 2종2급 적합 · 환경마크 인증(지역 환경오염 감소, 유해물질 감소, 생활 환경오염감소) · 대기환경보전법 VOC 규제 만족",
+    cautions: [
+      "제거(박리)할 계획이 있으면 3회 이상 필히 도장 — 도장사양서는 붓·로라로 3회 이상 도장하도록 안내",
+      "콘크리트 소지 상태 불량·구도막 부위·동절기·시멘트 견출/미장면 쵸킹·흡수차가 심한 바탕면·시멘트 용출이 심한 부위는 수성바인다200을 하도 도장한 뒤 이지필 프라이머 및 이지필 멀티를 도장",
+      "신축 시멘트 소재는 28일 이상 양생(25℃·상대습도 50%), 함수율 10% 이하, pH 7~9 · 레이턴스·시멘트가루·모래·흙·유분 제거 · 틈새·홈은 월드퍼티로 메꾼 뒤 표면조정",
+      "보수도장 시 노화된 구도막은 완전히 제거 · 구도막 위 보수도장은 구도막과의 적합성을 소비자상담실로 확인 후 사용",
+      "비 오는 날·습도 85% 이상·기온 5℃ 이하에는 도장 금지 (도막 균열·부착불량)",
+      "목재·철재·플라스틱 등 소지에 유성도료가 도장된 부위는 부착 불량 — 도장 금지(소비자상담실 확인)",
+      "가소제가 함유된 피도면·발포벽지·가죽소파 등에 도장·접촉 시 오염·끈적거림·변색 발생 가능",
+      "동일 제품·색상·LOT라도 희석비·도장기구·도장방법에 따라 이색현상 발생 가능 — 동일 LOT·동일 도장용구·방법 권장",
+      "현장 조색은 수성잉크 아크로텍스잉크 최대 5%(부피비) 이내 — 과량 사용 시 이색현상·건조불량·내수성 불량·VOC 증가",
+      "스프레이 도장 시 연속작업이 끊기면 광택 차이로 이색현상 발생 — 연속 작업하거나 골부위 등 경계에서 끊어 작업",
+      "도장 전 균일하게 혼합(믹서 교반 시 기포 주의)하고 도장 중에도 주기적으로 교반",
+      "타 도료와 혼합 금지 · 얼지 않게 보관 · 개봉 후 즉시 사용 · 용기는 밀폐해 주입구가 상단을 향하게 세워 보관"
+    ],
+    pdfs: [
+      { label: "📄 기술자료", url: "pdf/1tech3052481.pdf" },
+      { label: "📐 도장사양서", url: "pdf/1pntg3052481.pdf" }
+    ]
+  },
+  "이지필 프라이머": {
+    category: "하도 · 박리형 이지필 멀티 전용 전처리 수성도료",
+    image: "img/easypeel-primer.jpg",
+    desc: "흡수성 소재의 필러블 성능을 위한 이지필 멀티 전용 전처리 수성도료입니다. 투명한 1액형으로, 피도면에 흡수(스며듦)되어 이지필 멀티의 박리 성능을 돕습니다.",
+    uses: "이지필 멀티 도장 전 하도 (콘크리트 · 시멘트 · 몰탈 등 흡수성 소재)",
+    spec: "마감 피도면에 흡수 · 색상 투명 · 조성 1액형\n피도면 콘크리트, 시멘트, 몰탈\n부피고형분 15.4% · 추천 건조도막두께 피도면에 스며듬\n도장횟수 2회 이상\n이론도포면적 15.4㎡/L/1회 (도장작업 시 손실량과 표면상태를 고려)\n건조(25℃) 고화건조 2시간 이내 · 재도장간격 4시간 이후\n희석 희석하지 않음\n도장시스템 — 하도 이지필 프라이머 / 상도 이지필 멀티\n일위대가(이지필 멀티 도장사양서) — 하도 이지필 프라이머 1회 · 피도체 스며듦 · 0.06 L/㎡/1회 (2회 이상 도장)",
+    packaging: "0.4L",
+    filters: "이지필 멀티 전용 · 투명 · 희석하지 않음",
+    cautions: [
+      "이지필 멀티 전용 하도입니다 — 물 등으로 희석하지 말고 그대로 도장 (희석하지 않음)",
+      "2회 이상 도장 · 재도장은 25℃ 기준 4시간 이후 · 고화건조 2시간 이내",
+      "콘크리트 소지 상태 불량·구도막 부위·동절기·시멘트 견출/미장면 쵸킹·흡수차가 심한 바탕면·시멘트 용출이 심한 부위는 수성바인다200을 하도 도장한 뒤 이지필 프라이머 및 이지필 멀티를 도장",
+      "소지 표면은 레이턴스·시멘트가루·모래·흙·유분을 제거하고, 틈새·홈은 월드퍼티로 메꾼 뒤 표면조정 후 도장"
+    ],
+    pdfs: [],
+    pdfNote: "기술자료 파일 연결 예정"
+  }
+});
+
+/* 검색 연결: 키워드 · 태그 · 일상어 규칙 */
+(function(){
+  if (typeof SYMPTOM_MAP !== 'undefined'){
+    SYMPTOM_MAP.peel = { label: '🏷 이지필(박리형·원상복구) 가이드',
+      keywords: ['이지필','이지필멀티','이지필프라이머','easypeel','박리','박리형','필러블','원상복구','셀프인테리어','벗겨내는페인트','벗겨지는페인트'] };
+  }
+  if (typeof SP_TAGS !== 'undefined'){
+    ['수성페인트','수성도료'].forEach(function(k){ if (SP_TAGS[k]) SP_TAGS[k].push('이지필 멀티'); });
+    SP_TAGS['이지필'] = ['이지필 프라이머','이지필 멀티'];
+    SP_TAGS['박리형'] = ['이지필 프라이머','이지필 멀티'];
+    SP_TAGS['원상복구'] = ['이지필 프라이머','이지필 멀티'];
+  }
+  if (typeof SP_INTENTS !== 'undefined'){
+    SP_INTENTS.push({ id:'peel', pri:12, always:true,
+      re:/이지필|easypeel|박리|필러블|원상복구|벗겨내|벗겨낼|벗겨지는|떼어낼/,
+      title:'박리형(원상복구) 도장 — 이지필',
+      note:'건조 후 손쉽게 도막을 벗겨낼 수 있는 박리형 수성페인트입니다. 이지필 프라이머(하도)를 먼저 바르고 이지필 멀티(상도)를 칠하며, 제거할 계획이 있으면 3회 이상 도장합니다.',
+      products:['이지필 프라이머','이지필 멀티'], guide:['peel'] });
+  }
+  window._spIndex = null; window._spVocab = null;
+})();
+
+/* 소요량 계산기 — products.json에 이지필이 없으면 같은 형식으로 보충 (products.json에 추가되면 그 값이 우선) */
+var EASYPEEL_CALC = [
+  { id:'easypeel-multi', name:'이지필 멀티', aliases:['이지필멀티','Easy Peel Multi','EASYPEEL MULTI'], role:'topcoat',
+    system:{ primer:'이지필 프라이머' },
+    spec:{ coverage_m2_per_l:13.8, dft_um:30, coats:'2~3', spread_basis:'per_coat', pack_sizes:['1L'],
+           thinner:'물', thinning_pct_max:5, thinning_basis:'도료 부피비', tools:['붓','로라'],
+           thinning_note:'최대 5%(부피비)까지 물(청수) 희석' },
+    estimate:{ primer_l_per_m2:0.06, topcoat_l_per_m2:0.07, basis:'이지필 멀티 도장사양서 일위대가' } },
+  { id:'easypeel-primer', name:'이지필 프라이머', aliases:['이지필프라이머','Easy Peel Primer'], role:'primer',
+    system:{ primer:'이지필 프라이머' },
+    spec:{ coverage_m2_per_l:15.4, coats:'2', spread_basis:'per_coat', pack_sizes:['0.4L'],
+           thinner:'희석하지 않음', thinning_pct_max:0, thinning_basis:'도료 부피비',
+           thinning_note:'희석하지 않음 (이지필 멀티 전용 하도)' },
+    estimate:{ primer_l_per_m2:0.06, basis:'이지필 멀티 도장사양서 일위대가' } }
+];
+(function(){
+  function inject(db){
+    if (!db || !db.products) return db;
+    EASYPEEL_CALC.forEach(function(e){
+      var has = db.products.some(function(p){ return p.name === e.name || p.id === e.id; });
+      if (!has) db.products.push(JSON.parse(JSON.stringify(e)));
+    });
+    return db;
+  }
+  var _ens = window.calcEnsureCatalog;
+  if (typeof _ens === 'function'){
+    window.calcEnsureCatalog = function(){
+      return _ens.apply(this, arguments).then(inject);
+    };
+  }
+  /* products.js가 따로 받아둔 카탈로그에도 보충 */
+  var n = 0, t = setInterval(function(){
+    if (window.PRODUCTS_CATALOG){ inject(window.PRODUCTS_CATALOG); clearInterval(t); }
+    else if (++n > 60) clearInterval(t);
+  }, 250);
+})();
+
+</script>
+
+<script>
 /* ───────────────────────────────────────────────────────────────
    FAQ 데이터 (상황별 자주 묻는 질문)
    - 모든 문구는 이 파일의 PRODUCT_DB(제품 상세)와 각 가이드 섹션(시공 순서)에 적힌 내용만 사용했습니다.
@@ -6908,6 +7180,42 @@ var FAQ_DATA = [
   guide:['coated']
 },
 
+{ id:'easypeel', cat:'wall', q:'나중에 벗겨낼 수 있는(원상복구) 페인트가 있나요?',
+  kw:/원상복구|이지필|박리형|필러블|셀프인테리어|벗겨(내|낼)|떼어(내|낼)/,
+  intents:['peel'],
+  lead:'이지필 멀티는 박리형 수성페인트라 건조 후 손쉽게 도막을 벗겨낼 수 있어 원상복구가 간편한 실내 인테리어 도료입니다. 하도로 이지필 프라이머를 먼저 바르고 이지필 멀티를 칠하며, 나중에 제거할 계획이 있으면 이지필 멀티를 3회 이상 필히 도장합니다.',
+  check:[
+    '신축 시멘트는 28일 이상 양생(25℃·상대습도 50% 기준), 함수율 10% 이하, pH 7~9를 확인합니다.',
+    'LAITANCE·시멘트가루·모래·흙·유분을 깨끗이 제거하고, 틈새·홈은 월드퍼티로 메꾼 뒤 표면조정(샌딩)합니다. 보수도장 시에는 노화된 구도막을 완전히 제거합니다.',
+    '비 오는 날·습도 85% 이상·기온 5℃ 이하에는 도장하지 않습니다.'
+  ],
+  layers:[
+    { t:'피도면', s:'콘크리트·시멘트몰탈·석고보드·벽지·유리·목재', c:'base' },
+    { t:'① 하도', s:'이지필 프라이머 · 2회 이상', c:'l1' },
+    { t:'② 상도', s:'이지필 멀티 · 1회 건조도막 30㎛ · 3회 이상', c:'l3' }
+  ],
+  layerNote:'두께는 실제 비율이 아닙니다.',
+  steps:[
+    { t:'소지가 나쁘면 수성바인다200 먼저', src:'이지필 멀티 도장사양서',
+      body:'콘크리트 소지 불량·구도막 부위·동절기·쵸킹 소지(시멘트 견출·미장면)·흡수차가 심한 바탕면·시멘트 용출이 심한 부위는 수성바인다200을 먼저 도장합니다.',
+      prods:[['수성바인다200','원액 그대로 1회 · 상도용으로 사용 불가']] },
+    { t:'하도', src:'이지필 멀티 도장사양서 일위대가',
+      body:'도막은 피도체에 스며들 정도로, 2회 이상 도장합니다. 이론 소요량은 1회 0.06 L/㎡입니다.',
+      prods:[['이지필 프라이머','이지필 멀티의 하도']] },
+    { t:'상도', time:'25℃ 기준 재도장 3시간 이후', src:'이지필 멀티 기술자료 · 도장사양서',
+      body:'붓·로라로 도장하고, 물 5% 이내(도료 부피비)로 희석할 수 있습니다. 이론 소요량은 1회 0.07 L/㎡이며 3회 이상 도장합니다.',
+      prods:[['이지필 멀티','박리형 수성 · 에그쉘광 · 백색·담색 · 이론도포면적 13.8㎡/L(1회) · 1L']] }
+  ],
+  cautions:[
+    '제거(박리)할 계획이 있으면 이지필 멀티를 3회 이상 필히 도장합니다.',
+    '가소제가 함유된 피도면·발포벽지·가죽소파 등에 도장·접촉하면 오염·끈적거림·변색이 생길 수 있습니다.',
+    '목재·철재·플라스틱 등의 소지에 유성도료가 도장되어 있는 부위는 부착 불량이므로 도장하지 않습니다.',
+    '구도막 위에 보수도장할 때는 구도막과의 적합성을 소비자상담실로 먼저 확인합니다.',
+    '동일 제품·색상·LOT라도 희석비·도장기구·도장방법에 따라 이색현상이 생길 수 있어 가급적 동일 LOT, 동일 도장용구로 작업합니다.'
+  ],
+  guide:['peel']
+},
+
 /* ═════ 철재 ═════ */
 { id:'rust', cat:'iron', q:'철재 난간·문에 녹이 슬었어요',
   kw:/녹(?!색)|방청|부식/,
@@ -6945,11 +7253,11 @@ var FAQ_DATA = [
 { id:'galv', cat:'iron', q:'아연도금 각관·알루미늄에는 어떤 프라이머를 쓰나요?',
   kw:/아연|도금|갈바|알루미늄|비철|각관|사각관|각파이프|frp/,
   intents:['galv'],
-  lead:'아연도금·알루미늄 같은 비철금속에는 일반 철재용 하도 대신 스피폭시FD 프라이머 또는 워시프라이머를 씁니다. 상도는 777에나멜·매직탄·스피롤탄 등으로 안내합니다.',
+  lead:'아연도금·알루미늄 같은 비철금속에는 일반 철재용 하도 대신 스피폭시FD 프라이머(스텐·FRP 같은 비철재에도 사용) 또는 워시프라이머를 씁니다. 상도는 777에나멜·매직탄·스피롤탄 등으로 안내합니다.',
   steps:[
     { t:'하도 — 둘 중 선택', src:'각 제품 상세',
       prods:[
-        ['스피폭시FD 프라이머','2액형 에폭시 · 철재·아연도금소재·FRP·알루미늄·콘크리트·타일소재 하도용 · 혼합비 1:1(부피비) · 재도장 25℃ 6시간 이상~3일 이내'],
+        ['스피폭시FD 프라이머','2액형 에폭시 · 철재·아연도금소재·FRP·알루미늄·콘크리트·타일소재 하도용 · 스텐 같은 비철재에도 사용 · 혼합비 1:1(부피비) · 재도장 25℃ 6시간 이상~3일 이내'],
         ['워시프라이머','1액형 에칭 프라이머 · 경금속·동판·아연판·알루미늄·주석판 등 비철재 전처리용 · 건조도막 10㎛ 1회 · 상도는 25℃ 16시간 이후']
       ] },
     { t:'상도', src:'각 제품 상세',
@@ -7159,6 +7467,7 @@ var FAQ_DATA = [
       b.setAttribute('data-pdf', d.url); b.setAttribute('data-title', name + ' ' + String(d.label).replace(/^[^가-힣A-Za-z]+/, ''));
       b.textContent = d.label; bar.appendChild(b);
     });
+    if (p && !pdfs.length){ var np = mk('span', 'faq-nopdf'); np.textContent = p.pdfNote || '기술자료 · 도장사양서 없음'; bar.appendChild(np); }
     var more = mk('span', 'faq-more'); more.textContent = '상세 보기 ›'; bar.appendChild(more);
     row.appendChild(bar);
     return row;
